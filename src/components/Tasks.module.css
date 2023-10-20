@@ -28,6 +28,7 @@
 
 .tasks{
   margin-top: 2rem;
+  padding: 1rem 0;
   border-top: 2px solid var(--gray-400);
   border-radius: 10px;
 }
@@ -78,6 +79,10 @@
   accent-color: var(--purple);
 }
 
+.taskCard + .taskCard {
+  margin-top: .5rem;
+}
+
 .taskCard button{
   background: transparent;
   border: 0;
@@ -91,4 +96,10 @@
 
 .taskCard button:hover{
   color: var(--red);
+}
+
+.completedTask{
+  text-decoration: line-through;
+  color: var(--purple);
+  font-weight: 700;
 }

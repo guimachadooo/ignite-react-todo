@@ -52,6 +52,10 @@
   background: var(--blue);
 }
 
+.disabled{
+  cursor: not-allowed !important;
+}
+
 @media (max-width: 768px){
   .taskForm{
     grid-template-columns: 20rem 1fr;
