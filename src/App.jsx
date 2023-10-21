@@ -9,7 +9,7 @@ import "./global.css";
 function App() {
 
   let localTasks = JSON.parse(localStorage.getItem('tasks') || []);
-  let [tasks, setTasks] = useState(localTasks);
+  let [tasks, setTasks] = useState(localTasks ? localTasks : []);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
