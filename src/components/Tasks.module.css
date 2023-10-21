@@ -103,3 +103,9 @@
   color: var(--purple);
   font-weight: 700;
 }
+
+@media (max-width: 768px){
+  .tasksContent{
+    padding: 0 1rem;
+  }
+}

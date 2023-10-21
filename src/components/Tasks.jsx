@@ -61,6 +61,7 @@ export function Tasks ({ tasks, setTasks }) {
               <div className={styles.task}>
                 <input 
                   type="checkbox" 
+                  checked={task?.completed}
                   className={styles.checkbox} 
                   onChange={() => handleComplete(task?.id)}
                 />

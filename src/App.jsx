@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Header } from "./components/Header";
 import { Tasks } from "./components/Tasks";
-import { v4 as uuid } from "uuid";
 import styles from "./App.module.css";
 
 import "./global.css";
 
 function App() {
 
-  let [tasks, setTasks] = useState([]);
+  let localTasks = JSON.parse(localStorage.getItem('tasks') || []);
+  let [tasks, setTasks] = useState(localTasks);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
   
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.none}>
       <Header tasks={tasks} setTasks={setTasks} />
 
       <main>

@@ -58,6 +58,15 @@
 
 @media (max-width: 768px){
   .taskForm{
-    grid-template-columns: 20rem 1fr;
+    gap: 0;
+    grid-template-columns: 18rem 5rem;
+  }
+
+  .taskForm input[type=text]{
+    border-radius: 8px 0 0 8px;
+  }
+
+  .taskForm button[type=submit]{
+    border-radius: 0 8px 8px 0;
   }
 }
